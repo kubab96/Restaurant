@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export default{
     async getRestaurants(context, page){
-        await axios.get(`https://localhost:7109/api/restaurant?PageSize=${page.PageSize}&PageNumber=${page.PageNumber}`)
+        await axios.get(`https://localhost:7109/api/restaurant?searchPhrase=${page.SearchPhrase}&pageSize=${page.PageSize}&pageNumber=${page.PageNumber}&sortBy=${page.SortBy}&sortDirection=${page.SortDirection}`)
         .then(response => {
             context.commit('SET_RESTAURANTS', response.data);
         })
