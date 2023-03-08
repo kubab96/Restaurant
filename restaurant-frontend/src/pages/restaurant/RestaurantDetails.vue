@@ -50,7 +50,8 @@
           v-if="restaurant.contactEmail || restaurant.contactNumber"
           id="contact"
         >
-          <p><b>Contact: </b></p>
+        <p></p>
+          <b>Contact: </b>
           <div v-if="restaurant.contactEmail">
             <b>E-mail: </b>{{ restaurant.contactEmail }}
           </div>
@@ -58,8 +59,8 @@
             <b>Telephone: </b>{{ restaurant.contactNumber }}
           </div>
         </div>
-
-        <p><b>Address: </b></p>
+<p></p>
+        <b>Address: </b>
         <div><b>City: </b>{{ restaurant.city }}</div>
         <div><b>Street: </b>{{ restaurant.street }}</div>
         <div v-if="restaurant.postalCode">
